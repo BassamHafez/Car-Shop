@@ -19,15 +19,25 @@ for (var i = 0; i < imgs.length; i++) {
   });
 }
 
-close.addEventListener("click", closeFull);
 
 function closeFull() {
   full.style.display = "none";
   document.body.style.overflow='auto';
 }
 
-next.addEventListener("click", getNextSlide);
-prev.addEventListener("click", getPrevSlide);
+close.addEventListener("click", closeFull);
+
+full.addEventListener("click",function(e){
+  if(e.target==this){
+    closeFull();
+  }
+});
+
+slider.addEventListener("click",function(){
+  e.stopPropagation();
+})
+
+
 
 function getNextSlide() {
   currentIndex++;
@@ -44,6 +54,11 @@ function getPrevSlide() {
   }
   changeIndex(imgs[currentIndex].src);
 }
+
+next.addEventListener("click", getNextSlide);
+prev.addEventListener("click", getPrevSlide);
+
+
 
 document.addEventListener("keydown", function(e) {
   if (e.key == "Escape") {

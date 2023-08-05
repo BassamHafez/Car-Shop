@@ -14,17 +14,18 @@ body{
     background-color: transparent;
 }
 .nav-item{
-    padding: 5px 30px;
-    font-size: 20px;
+    padding: 0.3125rem 1.875rem;
+    font-size: 1.25rem;
 }
 .nav-item a{
     color: white !important;
-    border-bottom: 4px solid transparent;
+    border-bottom: 0.25rem solid transparent;
+    text-shadow: 0 0 0.3125rem snow;
     transition: all .5s;
+    font-weight: 700;
 }
 .nav-item a:hover{
-    border-bottom: 4px solid rgb(9, 21, 184);
-    text-shadow: 0 0 5px snow;
+    border-bottom: 0.25rem solid rgb(9, 21, 184);
 }
 
 .home{
@@ -32,19 +33,21 @@ body{
     position: relative;
     width: 80%;
     margin: auto;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgb(3, 73, 139);
-    padding: 50px 0 50px 50px;
+    border-radius: 1.25rem;
+    box-shadow: 0 0 0.625rem rgb(3, 73, 139);
+    padding: 3.125rem 0 3.125rem 3.125rem;
     height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 .home h1{
     color:black;
-    text-shadow: 0 0 7px rgb(3, 73, 139);
+    text-shadow: 0 0 0.4375rem rgb(3, 73, 139);
     font-weight: 900;
-    font-size: 50px;
+    font-size: 3.125rem;
+    text-align: center;
 }
 .home h4{
     color: rgb(216, 204, 204);
@@ -63,15 +66,15 @@ body{
     width: 70%;
 }
 .search-form input{
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     background-color:black;
-    box-shadow: 0 0 5px rgb(3, 73, 139);
-    border: 1px solid rgb(3, 73, 139);
+    box-shadow: 0 0 0.3125rem rgb(3, 73, 139);
+    border: 0.0625rem solid rgb(3, 73, 139);
     transition: all 1s;
 }
 .search-form input:focus,.search-form input:hover{
-    border: 1px solid snow;
-    box-shadow: 0 0 5px snow;
+    border: 0.0625rem solid snow;
+    box-shadow: 0 0 0.3125rem snow;
     background-color: rgb(5, 3, 3);
     color:rgb(3, 73, 139);
 }
@@ -81,40 +84,51 @@ body{
 .main-title{
     color: white;
     font-weight: 700;
-    text-shadow: 0 0 5px rgb(3, 73, 139);
+    text-shadow: 0 0 0.3125rem rgb(3, 73, 139);
     position: relative;
 }
 .main-title::after{
     content: '';
-    width:200px;
-    height: 5px;
+    width:12.5rem;
+    height: 0.3125rem;
     background-color: rgb(9, 21, 184);
     position: absolute;
-    bottom:-15px;
+    bottom:-0.9375rem;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .item{
     color: white;
-    border-radius: 10px;
-    border: 1px solid rgb(3, 73, 139);
+    border-radius: 0.625rem;
+    border: 0.0625rem solid rgb(3, 73, 139);
     cursor: pointer;
 }
 .item-img{
     height: 50%;
-    border-radius: 10px;
+    border-radius: 0.625rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
 }
+
+.category{
+    transition: all .6s;
+}
+.item-img:hover .category{
+   transform: scale(1.1);
+}
+
 .item-capture{
     background-color: rgb(2, 17, 31);
-    padding:20px;
-    border-radius: 10px;
+    padding:1.25rem;
+    border-radius: 0.625rem;
     height: 50%;
 }
 .shop-btn{
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     border: none;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     background-color:white;
     color:rgb(3, 73, 139);
     font-weight: 700;
@@ -125,7 +139,7 @@ body{
     color:white;
 }
 del{
-    font-size: 12px;
+    font-size: 0.75rem;
     color: rgba(255, 255, 255, .5);
 }
 .item-capture h5{
@@ -134,7 +148,7 @@ del{
 }
 .fa-heart{
     color: rgb(3, 73, 139);
-    font-size: 20px;
+    font-size: 1.25rem;
     transition: all .5s;
     cursor: pointer;
 }
@@ -144,9 +158,9 @@ del{
 }
 
 .view-btn{
-    padding: 15px 35px;
+    padding: 0.9375rem 2.1875rem;
     border: none;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     background-color: rgb(3, 73, 139);
     color:white;
     font-weight: 700;
@@ -171,25 +185,27 @@ del{
     overflow: hidden;
 }
 .slider{
-    width:500px;
-    height: 300px;
-    border-radius:20px ;
+    width:31.25rem;
+    height: 18.75rem;
+    border-radius:1.25rem ;
     background-color: black;
-    box-shadow: 0 0 10px rgb(3, 73, 139);
-    border: 1px solid rgb(3, 73, 139);
+    box-shadow: 0 0 0.625rem rgb(3, 73, 139);
+    border: 0.0625rem solid rgb(3, 73, 139);
     position: relative;
     background-image: url(../images/1.jpg);
     background-size: 100% 100%;
 }
     #close{
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 1.25rem;
+    right: 1.25rem;
     color: rgb(3, 73, 139);
     background-color: black;
-    padding: 2px 10px;
-    border-radius: 40px;
+    padding: 0.125rem 0.625rem;
+    border-radius: 2.5rem;
     transition: all 1s;
+    cursor: pointer;
+
     }
     #close:hover{
     background-color:rgb(3, 73, 139);
@@ -199,27 +215,31 @@ del{
 #next{
     position: absolute;
     top: 50%;
-    right: 20px;
+    right: 1.25rem;
     color: rgb(3, 73, 139);
     background-color:black;
-    padding: 2px 10px;
-    border-radius: 40px;
+    padding: 0.125rem 0.625rem;
+    border-radius: 2.5rem;
+    cursor: pointer;
     transition: all 1s;
 }
 #next:hover{
     background-color:rgb(3, 73, 139);
     color: black;
+
     }
     
 #prev{
     position: absolute;
     top: 50%;
-    left: 20px;
+    left: 1.25rem;
     color: rgb(3, 73, 139);
     background-color: black;
-    padding: 2px 10px;
-    border-radius: 40px;
+    padding: 0.125rem 0.625rem;
+    border-radius: 2.5rem;
     transition: all 1s;
+    cursor: pointer;
+
 }
 #prev:hover{
     background-color:rgb(3, 73, 139);
@@ -233,9 +253,9 @@ del{
    }
    .price{
     background-color: brown;
-    border: 1px solid black;
-    padding: 5px;
-    border-radius: 5px;
+    border: 0.0625rem solid black;
+    padding: 0.3125rem;
+    border-radius: 0.3125rem;
    }
  .img img{
     transition: all .2s;
@@ -245,4 +265,10 @@ del{
  }
  .img:hover img{
     transform: scale(1.04,1.04);
+ }
+
+ @media screen and (max-width:768px) {
+    body,html{
+        font-size: 14px;
+    }
  }
